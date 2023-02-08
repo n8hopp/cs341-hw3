@@ -1,3 +1,5 @@
+// file by Nate Hopper, 2/8
+
 submitClickEvent = function( event ) {
     alert('event:' + event)
     //check for vegan text
