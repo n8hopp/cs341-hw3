@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<! By Nate Hopper >
+<html>
+<head>
+<title>Cheesecake Order Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="./javascripts/months-click.js"></script>
+<script src="./javascripts/submit-click.js"></script>
+<link rel="stylesheet" href="./stylesheets/cs341hw1.css">
+</head>
+<body>
+<div id="container-order-form">
+	<h1> Cheesecake Order Form </h1>
+	<! Background image (is hidden by the css upon load, to replace with the background image) >
+	<img id="cheesecake" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="An image of a strawberry cheesecake." width="500"></img>
+
+	<! Div that hides upon submission >
+	<div id="hideable-div">
+		<form id="order-form">
+			<table>
+				<tr>
+					<th> Quantity </th>
+					<th> Topping </th>
+				</tr>
+				<tr>
+					<td></td>
+					<td> <input type="radio" name="radio-type" id="button-plain" value="Plain" checked> <label for="button-plain">Plain</label> </td>
+				</tr>
+				<tr>
+					<td> <select name="quantity" id="ddl-quantity">
+							<option value="one">1</option>
+							<option value="two">2</option>
+							<option value="three">3</option>
+							<option value="four">4</option>
+						</select>
+					</td>
+					<td> <input type="radio" name="radio-type" id="button-cherry" value="Cherry"> <label for="button-cherry">Cherry</label> </td>
+				</tr>
+				<tr>
+					<td></td>
+					<td> <input type="radio" name="radio-type" id="button-chocolate" value="Chocolate"> <label for="button-chocolate">Chocolate</label> </td>
+				</tr>
+			</table>
+			<label for="ta-notes">Notes: </label> <br>
+			<textarea name="ta-notes" id="ta-notes" rows="5" style="width:100%" placeholder="Enter any special instructions here."></textarea><br>
+			
+			<input type="button" id="button-submit" value="Order">
+		</form>
+		
+		<div id="order-info" style="padding-top: 10%">
+			<div style="display:inline">
+				<h3 style="display:inline">Total Orders</h3> 
+				<div class="dropdown">
+					<button class="dropbtn">Jan</button>
+					<div class="dropdown-content">
+						<a class="months" href="#">Jan</a>
+						<a class="months" href="#">Feb</a>
+						<a class="months" href="#">Mar</a>
+						<a class="months" href="#">Apr</a>
+						<a class="months" href="#">May</a>
+						<a class="months" href="#">Jun</a>
+						<a class="months" href="#">Jul</a>
+						<a class="months" href="#">Aug</a>
+						<a class="months" href="#">Sept</a>
+						<a class="months" href="#">Oct</a>
+						<a class="months" href="#">Nov</a>
+						<a class="months" href="#">Dec</a>
+					</div>
+				</div>
+			</div>
+			<ul>
+				<li> 11 cherry </li>
+				<li> 17 chocolate </li>
+				<li> 31 plain </li>
+		</div>
+	</div>
+
+	<! Div that shows upon submission >
+	<div id="accept-div" style="display:none; text-align:center">
+		Thank you! Your order has been placed.
+		
+		<h3>Order details:</h3>
+		<div id="topping-confirm"></div>
+		<div id="quantity-confirm"></div>
+		<div id="notes-confirm"></div>
+	</div>
+</div>
+
+
+</body>
+</html> 
